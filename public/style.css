@@ -1,0 +1,220 @@
+html {
+	background	: black;
+	color		: white;
+}
+
+body {
+	width	: 100%;
+	overflow: hidden;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+canvas {
+	background	: rgb(20,20,20);
+	position	: absolute;
+	top			: 50px;
+	/*left		: 60px;*/
+	width		: 92%;
+	height		: 80%;
+	padding-top		: 3%;
+	padding-bottom	: 3%;
+	padding-left	: 4%;
+	padding-right	: 4%;
+	background-image	: url("/img/killmeplease_sol01.png");
+	background-size		: 100% 100%;
+	background-repeat	: no-repeat;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*##############################################################*/
+/*						Game Page								*/
+/*##############################################################*/
+#gamePannel {
+	position	: absolute;
+	top			: 0px;
+	left		: 0px;
+	width		: 100%;
+	height		: 100%;
+}
+
+#playerz {
+	position	: absolute;
+	top			: 0px;
+	left		: -0.5%;
+	height		: 55px;
+	padding		: 5px;
+	width		: 100%;
+	background-image	: url("/img/system/en_tete_score.png");
+	background-size		: 100% 100%;
+	z-index		: 20;
+}
+
+.aPlayer, #time {
+	width		: 8%;
+	height		: 40px;
+	padding		: 5px;
+	margin-right: 1%;
+	float		: left;
+	font-weight : bold;
+}
+
+.aPlayer {
+	background-image	: url("/img/crane_frag.png");
+	background-size		: 100% 100%;
+	font-size	: 150%;
+	height		: 40px;
+	width		: 8%;
+}
+
+.nnn {
+	overflow	: hidden;
+	width		: 100%;
+}
+
+.sss {
+	font-size	: 250%;
+	float		: right;
+	margin-right: 22%;
+	margin-top	: -35px;
+}
+
+#time {
+	width		: 13%;
+	margin-right: 3%;
+	margin-left	: 1%;
+	margin-top	: -1%;
+	padding-top	: 10px;
+	text-align	: center;
+	font-size	: 400%;
+	font-weight : normal;
+}
+
+#tchat {
+	position	: absolute;
+	left		: 5%;
+	bottom		: 3%;
+	width		: 20%;
+}
+
+#messages {
+	height		: 200px;
+	overflow	: auto;
+	background	: rgba(100,100,100,0.5);
+	border-radius: 5px;
+}
+
+#endPannel {
+	position: absolute;
+	left	: 40%;
+	top		: 8%;
+	width	: 500px;
+	height	: 500px;
+	padding-left : 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	background-image	: url("/img/system/score.png");
+	background-size		: 100% 100%;
+	z-index		: 100;
+}
+
+#endPannel>#listPlayers {
+	position: absolute;
+	top		: 140px;
+	width	: 400px;
+	height	: 500px;
+	overflow: auto;
+}
+
+#endPannel>#listPlayers>li {
+	list-style-type: none;
+	font-size	: 200%;
+}
+
+#endPannel>#listPlayers>li>.first {
+	color		: red;
+	font-weight : bold;
+}
+
+#endPannel>#listPlayers>li>.scored,
+#endPannel>#listPlayers>li>.first>.scored {
+	float	: right;
+}
+
+#debugWindow {
+	position		: absolute;
+	padding			: 20px;
+	top				: 200px;
+	left			: 200px;
+	background		: red;
+	height			: 100px;
+	border-radius	: 10px;
+}
+
+/*##############################################################*/
+/*						Connection pannel						*/
+/*##############################################################*/
+#connectPannel {
+	text-align			: center;
+}
+
+#logInput {
+	background-color	: rgb(20,20,20);
+	border-color		: rgb(50,50,50);
+	border-radius		: 5px;
+	height				: 30px;
+	width				: 200px;
+	padding-left		: 5px;
+	color				: white;
+}
+
+#mainImg {
+	min-width			: 500px;
+	min-height			: 300px;
+	width				: 50%;
+	height				: 50%;
+}
+
+#connectBtn {
+	border				: none;
+	background-image	: url("/img/system/btn_play.png");
+	width				: 400px;
+	height				: 100px;
+	background-size		: 100% 100%;
+}
+
+#connectBtn:hover {
+	background-image	: url("/img/system/btn_play_over.png");
+}
+
+#connectBtn:active {
+	background-image	: url("/img/system/btn_play_click.png");
+}
+
+#btnHelp {
+	border				: none;
+	background-image	: url("/img/system/btn_help.png");
+	width				: 300px;
+	height				: 70px;
+	background-size		: 100% 100%;
+	margin-top			: 10px;
+}
+
+#btnHelp:hover {
+	background-image	: url("/img/system/btn_help_over.png");
+}
+
+#btnHelp:active {
+	background-image	: url("/img/system/btn_help_click.png");
+}
+
+#help {
+	position	: absolute;
+	top			: 20px;
+	margin-left	: 10%;
+	width		: 80%;
+	height		: 80%;
+	
+}

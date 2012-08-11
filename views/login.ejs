@@ -1,0 +1,46 @@
+<audio audio id="BGMthemeMenu" loop>
+		  <source src="/audio/mp3/BGM/00_theme_menu.MP3" type="audio/mp3" />
+		  <source src="/audio/ogg/BGM/00_theme_menu.OGG" type="audio/ogg" />
+	</audio>
+
+<div id="connectPannel">
+	<img id="mainImg" src="/img/system/titre.png" />
+	<h3>Type your login name</h3>
+	<% if (error) { %><p>Erreur: <%= error %></p><% } %>
+	<form method="post" id="form">
+	  <input id="logInput" type="text" name="username" placeholder="Type your login" autofocus required<% if (username) { %> value="<%= username %>"<% } %>><br />
+	  <input type="button" id="connectBtn" value="" onclick="sub()">
+	</form>
+  <input type="button" value="" id="btnHelp" onclick="displayHelp()">
+  <img id="help" src="/img/system/menu_help.png" style="display:none;" onclick="displayHelp()"/>
+  <script type="text/javascript">
+	var BGMthemeMenu      = document.getElementById("BGMthemeMenu");
+	
+	window.onload = function()
+	{
+		BGMthemeMenu.play();
+	}
+	
+	function sub()
+	{
+		document.getElementById("mainImg").setAttribute('src', '/img/system/titre_click.png');
+		document.getElementById("connectBtn").style.backgroundImage = 'url("/img/system/btn_play_click.png")';
+		setTimeout(function() {
+			document.getElementById('form').submit()
+			}, 500);
+	}
+	
+	function displayHelp()
+	{
+		var help = document.getElementById("help");
+		if (help.style.display == "none")
+		{
+			help.style.display = "block";
+		}
+		else
+		{
+			help.style.display = "none";
+		}
+	}
+  </script>
+</div>
